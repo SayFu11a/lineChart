@@ -1,9 +1,5 @@
-// import type { TooltipProps } from "recharts";
-
 import type { Payload } from "recharts/types/component/DefaultTooltipContent";
 
-// type ValueType = number | null;
-// type NameType = string;
 type Theme = "light" | "dark";
 
 const THEME_STYLES = {

@@ -7,8 +7,8 @@ type Theme = "light" | "dark";
 type Props = {
   value: LineStyle;
   onChange: (value: LineStyle) => void;
-  style?: React.CSSProperties; // <--------- изменено: сделал опциональным
-  theme?: Theme; // <--------- добавлено
+  style?: React.CSSProperties;
+  theme?: Theme;
 };
 
 const labels: Record<LineStyle, string> = {

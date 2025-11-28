@@ -1,4 +1,3 @@
-// VariationsSelector.tsx
 import { useState, useRef, useEffect } from "react";
 import styles from "./VariationsSelector.module.css";
 

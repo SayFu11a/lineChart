@@ -13,8 +13,8 @@
     background: #fff;
     font-size: 14px;
     cursor: pointer;
-    color: #111827; /* <--------- добавлено */
-    transition: all 0.3s; /* <--------- добавлено */
+    color: #111827; 
+    transition: all 0.3s;
   }
   
   .caret {
@@ -42,12 +42,12 @@
     padding: 4px 12px;
     font-size: 14px;
     cursor: pointer;
-    color: #111827; /* <--------- добавлено */
+    color: #111827; 
     transition: all 0.3s;
   }
 
   .option:hover {
-    background: #f3f4f6; /* <--------- добавлено */
+    background: #f3f4f6; 
   }
 
   .dark .button {
