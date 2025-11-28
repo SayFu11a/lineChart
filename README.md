@@ -7,7 +7,7 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 
 ## 🚀 Live Demo
 
-[DEMO](https://sayfu11a.github.io/lineChart/)
+https://sayfu11a.github.io/lineChart/
 
 ---
 
