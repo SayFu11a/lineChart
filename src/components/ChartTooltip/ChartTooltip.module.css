@@ -1,0 +1,65 @@
+/* ChartTooltip.module.css он походу нигде в проекте не юзается */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+    padding: 8px 12px;
+    min-width: 220px;
+    font-size: 13px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #111827;
+    font-weight: 500;
+  }
+  
+  .date {
+    white-space: nowrap;
+  }
+  
+  .list {
+    max-height: 180px; /* чтобы можно было добавить scroll, как в макете */
+    overflow-y: auto;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 0;
+    gap: 8px;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #4b5563;
+  }
+  
+  .name {
+    color: #111827;
+  }
+  
+  .value {
+    color: #111827;
+  }
+  
+  .trophy {
+    margin-left: 4px;
+    font-size: 11px;
+  }
+  

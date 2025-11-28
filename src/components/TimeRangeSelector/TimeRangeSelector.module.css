@@ -1,0 +1,98 @@
+.wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    color: #111827; /* <--------- добавлено */
+    transition: all 0.3s;
+  }
+  
+  .button:hover {
+    background: #f9fafb;
+  }
+  
+  .caret {
+    font-size: 10px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 120px;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    z-index: 10;
+    transition: all 0.3s;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+    color: #111827;
+  }
+  
+  .option:hover {
+    background: #f3f4f6;
+  }
+  
+  .option.selected {
+    background: #eff6ff;
+    color: #3b82f6;
+  }
+  
+  /* Скрываем radio визуально, но оставляем для accessibility */
+  .option input[type="radio"] {
+    accent-color: #3b82f6;
+  }
+
+  .dark .button {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f1f5f9;
+  }
+  
+  .dark .button:hover {
+    background: #1e293b;
+  }
+  
+  .dark .dropdown {
+    background: #0f172a;
+    border-color: #334155;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .dark .option {
+    color: #f1f5f9;
+  }
+  
+  .dark .option:hover {
+    background: #1e293b;
+  }
+  
+  .dark .option.selected {
+    background: #1e3a5f;
+    color: #60a5fa;
+  }
+  
+  .dark .option input[type="radio"] {
+    accent-color: #60a5fa;
+  }
