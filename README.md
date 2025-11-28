@@ -7,14 +7,6 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 
 ## 🚀 Live Demo
 
-## 📸 Screenshot
-
-<img width="1363" height="648" alt="image" src="https://github.com/user-attachments/assets/c895d74c-1f77-489f-9b5b-896caaff74dd" />
-
-
-<img width="1364" height="680" alt="image" src="https://github.com/user-attachments/assets/b95033fa-19e5-4c78-bbc3-24543aa1979b" />
-
-
 ---
 
 ## 🛠 Tech Stack
