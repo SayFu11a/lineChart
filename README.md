@@ -16,7 +16,6 @@
     <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-dark.png" alt="Dark Theme" /></a>
 </div>
 
-```markdown
 # 📊 A/B Test Interactive Line Chart
 
 An interactive line chart for visualizing A/B test statistics built with React, TypeScript, and Recharts.
@@ -70,6 +69,7 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 ---
 
 ## 📁 Project Structure
+
 ```
 
 src/
@@ -100,7 +100,7 @@ src/
 ├── App.tsx
 └── main.tsx
 
-````
+```
 
 ---
 
@@ -125,7 +125,7 @@ npm install
 
 # Start development server
 npm run dev
-````
+```
 
 The app will be available at `http://localhost:5173`
 
