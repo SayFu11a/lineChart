@@ -8,13 +8,13 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 
 ## 📸 Screenshots
 
-## Light Theme
+### Light Theme
 
 <div align="center" id="LightTheme">
     <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-light.png" alt="Light Theme" /></a>
 </div>
 
-## Dark Theme
+### Dark Theme
 
 <div align="center" id="DarkTheme">
     <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-dark.png" alt="Dark Theme" /></a>
