@@ -11,14 +11,15 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 
 ## Light Theme
 
-<a href="https://sayfu11a.github.io/lineChart/" title="Light">
-  <img src="https://raw.githubusercontent.com/SayFu11a/lineChart/main/image-light.png" alt="Light Theme" width="80%">
-</a>
-
-![Light Theme](https://raw.githubusercontent.com/SayFu11a/lineChart/main/image-light.png)
+<div align="center" id="LightTheme">
+    <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-light.png" alt="Light Theme" /></a>
+</div>
 
 ## Dark Theme
 
+<div align="center" id="DarkTheme">
+    <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-dark.png" alt="Dark Theme" /></a>
+</div>
 ![Dark Theme](https://raw.githubusercontent.com/SayFu11a/lineChart/main/image-dark.png)
 
 ## 🛠 Tech Stack
@@ -244,12 +245,5 @@ MIT
 
 ```
 
----
 
 ```
-
-<div align="center" id="trendradar">
-
-<a href="https://trendshift.io/repositories/14726" target="_blank"><img src="/image-light.png" alt="sansan0%2FTrendRadar | Trendshift" /></a>
-
-</div>
