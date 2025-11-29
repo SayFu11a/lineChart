@@ -9,13 +9,13 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 
 ## 📸 Screenshots
 
-### Light Theme
+## Light Theme
 
-![Light Theme](./image-light.png)
+![Light Theme](https://raw.githubusercontent.com/SayFu11a/lineChart/main/image-light.png)
 
-### Dark Theme
+## Dark Theme
 
-## ![Dark Theme](./image-dark.png)
+![Dark Theme](https://raw.githubusercontent.com/SayFu11a/lineChart/main/image-dark.png)
 
 ## 🛠 Tech Stack
 
