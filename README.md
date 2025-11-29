@@ -1,3 +1,7 @@
+# 📊 A/B Test Interactive Line Chart
+
+An interactive line chart for visualizing A/B test statistics built with React, TypeScript, and Recharts.
+
 ## 🚀 Live Demo
 
 👉 [View Live Demo](https://sayfu11a.github.io/lineChart/)
@@ -15,10 +19,6 @@
 <div align="center" id="DarkTheme">
     <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-dark.png" alt="Dark Theme" /></a>
 </div>
-
-# 📊 A/B Test Interactive Line Chart
-
-An interactive line chart for visualizing A/B test statistics built with React, TypeScript, and Recharts.
 
 ## 🛠 Tech Stack
 
