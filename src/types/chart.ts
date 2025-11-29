@@ -28,3 +28,5 @@ export type Theme = "light" | "dark";
 export type VisitsMap = Record<string, number | undefined>;
 
 export type ConversionsMap = Record<string, number | undefined>;
+
+export type LineStyle = "line" | "smooth" | "area";

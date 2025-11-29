@@ -1,5 +1,3 @@
-# README.md
-
 ```markdown
 # 📊 A/B Test Interactive Line Chart
 
@@ -7,19 +5,29 @@ An interactive line chart for visualizing A/B test statistics built with React, 
 
 ## 🚀 Live Demo
 
-https://sayfu11a.github.io/lineChart/
+👉 [View Live Demo](https://sayfu11a.github.io/lineChart/)
 
----
+## 📸 Screenshots
+
+### Light Theme
+
+![Light Theme](./image-light.png)
+
+### Dark Theme
+
+## ![Dark Theme](./image-dark.png)
 
 ## 🛠 Tech Stack
 
-| Technology      | Purpose           |
-| --------------- | ----------------- |
-| **React 19**    | UI Framework      |
-| **TypeScript**  | Type Safety       |
-| **Recharts**    | Charting Library  |
-| **Vite**        | Build Tool        |
-| **CSS Modules** | Component Styling |
+| Technology        | Purpose           |
+| ----------------- | ----------------- |
+| **React 19**      | UI Framework      |
+| **TypeScript**    | Type Safety       |
+| **Recharts**      | Charting Library  |
+| **Vite**          | Build Tool        |
+| **CSS Modules**   | Component Styling |
+| **html-to-image** | Export to PNG     |
+| **gh-pages**      | Deployment        |
 
 ### Why Recharts?
 
@@ -53,7 +61,7 @@ https://sayfu11a.github.io/lineChart/
 | Zoom In / Zoom Out / Reset Zoom          | ✅     |
 | Line style selector (Line, Smooth, Area) | ✅     |
 | Light / Dark theme toggle                | ✅     |
-| Export chart to PNG                      | ❌     |
+| Export chart to PNG                      | ✅     |
 
 ---
 
@@ -66,7 +74,11 @@ src/
 │ └── ab-test-data.json # Raw A/B test data
 ├── components/
 │ ├── ABTestChart/ # Main chart component
-│ ├── ChartTooltip/ # Custom tooltip
+│ │ ├── ABTestChart.tsx
+│ │ ├── ChartControls.tsx # Control buttons
+│ │ ├── ChartRenderer.tsx # Chart rendering logic
+│ │ └── index.ts
+│ ├── ChartTooltip/ # Custom hover tooltip
 │ ├── VariationsSelector/ # Variation toggle buttons
 │ ├── TimeRangeSelector/ # Day/Week toggle
 │ └── LineStyleSelector/ # Line/Smooth/Area toggle
@@ -75,7 +87,8 @@ src/
 ├── data/
 │ └── chartData.ts # Processed daily/weekly data
 ├── hooks/
-│ └── useChartZoom.ts # Zoom logic hook
+│ ├── useChartZoom.ts # Zoom logic hook
+│ └── useExportChart.ts # Export to PNG hook
 ├── types/
 │ └── chart.ts # TypeScript types
 ├── utils/
@@ -98,10 +111,10 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/sayfu11a/lineChart.git
 
 # Navigate to project folder
-cd YOUR_REPO_NAME
+cd lineChart
 
 # Install dependencies
 npm install
@@ -112,17 +125,15 @@ npm run dev
 
 The app will be available at `http://localhost:5173`
 
-### Build for Production
+### Available Scripts
 
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
+| `npm run deploy`  | Deploy to GitHub Pages   |
 
 ---
 
@@ -135,20 +146,20 @@ The chart uses data from `ab-test-data.json`:
   "variations": [
     { "id": 0, "name": "Original" },
     { "id": 10001, "name": "Variation A" },
-    ...
+    { "id": 10002, "name": "Variation B" },
+    { "id": 10003, "name": "Variation C" }
   ],
   "data": [
     {
       "date": "2025-01-01",
-      "visits": { "0": 100, "10001": 120, ... },
-      "conversions": { "0": 5, "10001": 8, ... }
-    },
-    ...
+      "visits": { "0": 100, "10001": 120, "10002": 95, "10003": 110 },
+      "conversions": { "0": 5, "10001": 8, "10002": 4, "10003": 7 }
+    }
   ]
 }
 ```
 
-Conversion rate is calculated as:
+**Conversion rate formula:**
 
 ```
 conversionRate = (conversions / visits) * 100
@@ -158,30 +169,60 @@ conversionRate = (conversions / visits) * 100
 
 ## 🎨 Features Overview
 
-### Variations Selector
+### 📈 Variations Selector
 
-Toggle visibility of each variation (Original, A, B, C). At least one must remain selected.
+Toggle visibility of each variation (Original, A, B, C). At least one variation must always remain selected.
 
-### Day / Week Toggle
+### 📅 Day / Week Toggle
 
 - **Day**: Shows daily conversion rates
-- **Week**: Shows weekly averages
+- **Week**: Shows weekly averages (aggregated data)
 
-### Line Style Selector
+### 📉 Line Style Selector
 
 - **Line**: Straight lines connecting data points
 - **Smooth**: Curved monotone interpolation
-- **Area**: Filled area chart
+- **Area**: Filled area chart with transparency
 
-### Zoom Controls
+### 🔍 Zoom Controls
 
 - **+** Zoom in (narrow date range)
 - **–** Zoom out (expand date range)
-- **⟳** Reset to full range
+- **⟳** Reset to full date range
 
-### Theme Toggle
+### 🌓 Theme Toggle
 
-Switch between light and dark color schemes.
+Switch between light and dark color schemes. All chart elements adapt to the selected theme.
+
+### 📷 Export to PNG
+
+Download the current chart view as a PNG image file.
+
+---
+
+## 🔧 Key Implementation Details
+
+### Custom Hooks
+
+**useChartZoom** - Manages zoom state with min/max boundaries
+
+```typescript
+const { xDomain, handleZoomIn, handleZoomOut, resetZoom } = useChartZoom({
+  fullDomain,
+});
+```
+
+**useExportChart** - Handles PNG export using html-to-image
+
+```typescript
+const { chartRef, exportToPng } = useExportChart();
+```
+
+### Data Processing
+
+- Daily data is calculated from raw visits/conversions
+- Weekly data is pre-aggregated using averaging
+- Null values are handled gracefully (gaps in chart)
 
 ---
 
@@ -190,3 +231,15 @@ Switch between light and dark color schemes.
 MIT
 
 ---
+
+## 👤 Author
+
+**sayfu11a**
+
+- GitHub: [@sayfu11a](https://github.com/sayfu11a)
+
+```
+
+---
+
+```

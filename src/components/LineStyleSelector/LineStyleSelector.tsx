@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import type { LineStyle } from "../../types/chart";
 import styles from "./LineStyleSelector.module.css";
 
-export type LineStyle = "line" | "smooth" | "area";
 type Theme = "light" | "dark";
 
 type Props = {
