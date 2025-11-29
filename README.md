@@ -234,15 +234,8 @@ const { chartRef, exportToPng } = useExportChart();
 
 MIT
 
----
-
 ## 👤 Author
 
 **sayfu11a**
 
 - GitHub: [@sayfu11a](https://github.com/sayfu11a)
-
-```
-
-
-```
