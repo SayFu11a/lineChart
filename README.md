@@ -1,3 +1,13 @@
+<div align="center" id="LightTheme">
+    <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-light.png" alt="Light Theme" /></a>
+</div>
+
+## Dark Theme
+
+<div align="center" id="DarkTheme">
+    <a href="ttps://sayfu11a.github.io/lineChart/" target="_blank"><img src="/image-dark.png" alt="Dark Theme" /></a>
+</div>
+
 ```markdown
 # 📊 A/B Test Interactive Line Chart
 
